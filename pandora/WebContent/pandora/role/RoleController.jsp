@@ -16,7 +16,8 @@
 		</h2>
 
 		<h:form>
-			<h:dataTable value="#{roleControllerListBean.listRoles}" var="role" rendered="#{loginBean.membreCourant.role == null}">
+			<h:dataTable value="#{roleControllerListBean.listRoles}" var="role"
+				rendered="#{loginBean.membreCourant.role == null}">
 				<h:column>
 					<f:facet name="header">Role </f:facet>
 					<h:outputText value="#{role.nom} " />
@@ -28,8 +29,7 @@
 			<h3>
 				Vous êtes
 				<h:panelGroup rendered="#{loginBean.membreCourant.role != null}">
-					<h:outputText"
-						value="#{loginBean.membreCourant.role.nom}" />
+					<h:outputText value="#{loginBean.membreCourant.role.nom}" />
 					<h:commandButton value="changer de role"
 						actionListener="#{roleControllerListBean.deSelect()}" />
 				</h:panelGroup>

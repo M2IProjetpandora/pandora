@@ -24,11 +24,11 @@ public class RoleSingleton {
 		final RoleDao rolDao = new RoleDaoImpl();
 		
 		final RoleDto r1 = rolDao.getInstance();
-		r1.setNom("Role1");
+		r1.setNom("Assasin");
 		listRoles.add(r1);
 
 		final RoleDto r2 = rolDao.getInstance();
-		r2.setNom("Role2");
+		r2.setNom("Knight");
 		listRoles.add(r2);
 	}
 

@@ -27,6 +27,7 @@ public class MembreSingleton {
 		m1.setPrenom("Soufiane");
 		m1.setPseudo("pseudo1");
 		m1.setLogin("sf");
+		m1.setRole(RoleSingleton.getInstance().getRoleByNom("Fée"));
 		m1.setEmail("sf@gmail.com");
 
 		listMembres.add(m1);

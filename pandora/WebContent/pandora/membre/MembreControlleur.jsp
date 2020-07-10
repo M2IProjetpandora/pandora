@@ -13,13 +13,17 @@
 		<h:form>
 			<h:dataTable value="#{membreControllerListBean.listMembres}" var="membre">
 				<h:column>
-					<f:facet name="header">Membre</f:facet>
+					<f:facet name="header">Membre: </f:facet>
 					<h:outputText value="#{membre.nom} " />
 				</h:column>
 				
 				<h:column>
-					<f:facet name="header">Pseudo </f:facet>
+					<f:facet name="header">Pseudo: </f:facet>
 					<h:outputText value="#{membre.pseudo} " />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Role: </f:facet>
+					<h:outputText value="#{membre.role.nom} " />
 				</h:column>
 				
 				
