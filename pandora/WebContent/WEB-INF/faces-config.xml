@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+	version="2.3">
+
+	<application>
+		<locale-config>
+			<default-locale>fr</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+
+		<resource-bundle>
+			<base-name>fr.seedle.pandora.msg</base-name>
+			<var>msg</var>
+		</resource-bundle>
+
+	</application>
+
+	<!-- Navigation rule login page -->
+	<navigation-rule>
+		<from-view-id>/pandora/*</from-view-id>
+
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/pandora/login.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>loginwrongid</from-outcome>
+			<to-view-id>/pandora/loginWrongId.jsp</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>mainpage</from-outcome>
+			<to-view-id>/pandora/mainpage.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>rolecontroller</from-outcome>
+			<to-view-id>/pandora/role/RoleController.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>operationcontroller</from-outcome>
+			<to-view-id>/pandora/operation/OperationController.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>membrecontroller</from-outcome>
+			<to-view-id>/pandora/membre/MembreControlleur.jsp</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+</faces-config>
